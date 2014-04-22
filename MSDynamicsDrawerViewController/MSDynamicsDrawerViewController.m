@@ -53,7 +53,7 @@ typedef void (^ViewActionBlock)(UIView *view);
 }
 @end
 
-static BOOL MSDynamicsDrawerDirectionIsNonMasked(MSDynamicsDrawerDirection drawerDirection)
+BOOL MSDynamicsDrawerDirectionIsNonMasked(MSDynamicsDrawerDirection drawerDirection)
 {
     switch (drawerDirection) {
         case MSDynamicsDrawerDirectionNone:
@@ -67,7 +67,7 @@ static BOOL MSDynamicsDrawerDirectionIsNonMasked(MSDynamicsDrawerDirection drawe
     }
 }
 
-static BOOL MSDynamicsDrawerDirectionIsCardinal(MSDynamicsDrawerDirection drawerDirection)
+BOOL MSDynamicsDrawerDirectionIsCardinal(MSDynamicsDrawerDirection drawerDirection)
 {
     switch (drawerDirection) {
         case MSDynamicsDrawerDirectionTop:
@@ -80,7 +80,7 @@ static BOOL MSDynamicsDrawerDirectionIsCardinal(MSDynamicsDrawerDirection drawer
     }
 }
 
-static BOOL MSDynamicsDrawerDirectionIsValid(MSDynamicsDrawerDirection drawerDirection)
+BOOL MSDynamicsDrawerDirectionIsValid(MSDynamicsDrawerDirection drawerDirection)
 {
     switch (drawerDirection) {
         case MSDynamicsDrawerDirectionNone:
