@@ -386,9 +386,13 @@ void MSDynamicsDrawerDirectionActionForMaskedValues(MSDynamicsDrawerDirection di
 - (void)setDrawerViewController:(UIViewController *)drawerViewController forDirection:(MSDynamicsDrawerDirection)direction
 {
     NSAssert(MSDynamicsDrawerDirectionIsCardinal(direction), @"Only accepts cardinal reveal directions");
-    for (UIViewController *currentDrawerViewController in self.drawerViewControllers) {
+
+#ifdef DEBUG
+	for (UIViewController *currentDrawerViewController in self.drawerViewControllers) {
         NSAssert(currentDrawerViewController != drawerViewController, @"Unable to add a drawer view controller when it's previously been added");
     }
+#endif
+	
     switch (direction) {
         case MSDynamicsDrawerDirectionLeft:
         case MSDynamicsDrawerDirectionRight:
